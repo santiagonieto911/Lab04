@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificación de Suma</title>
+</head>
+<body>
+    <script>
+        const startTime = new Date().getTime();
+        const num1 = Math.floor(Math.random() * 100);
+        const num2 = Math.floor(Math.random() * 100);
+        const suma = num1 + num2;
+        const respuesta = parseInt(prompt(`¿Cuánto es ${num1} + ${num2}?`));
+        const endTime = new Date().getTime();
+        const tiempo = (endTime - startTime) / 1000;
+
+        if (respuesta === suma) {
+            document.write(`<p>¡Respuesta correcta!</p>`);
+        } else {
+            document.write(`<p>Respuesta incorrecta.</p>`);
+        }
+        document.write(`<p>Tiempo de respuesta: ${tiempo} segundos</p>`);
+    </script>
+</body>
+</html>
