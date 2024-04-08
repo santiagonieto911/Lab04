@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Números</title>
+</head>
+<body>
+    <h2>Resultados de la función contador</h2>
+
+    <script>
+        function contador(arr) {
+            let negativos = 0;
+            let ceros = 0;
+            let positivos = 0;
+
+            arr.forEach(num => {
+                if (num < 0) {
+                    negativos++;
+                } else if (num === 0) {
+                    ceros++;
+                } else {
+                    positivos++;
+                }
+            });
+
+            return { negativos, ceros, positivos };
+        }
+
+        function mostrarResultado(arr, resultados) {
+            document.write("<p>Conteo de números en el arreglo:</p>");
+            document.write(`<p>Números ingresados: ${arr.join(', ')}</p>`);
+            document.write(`<p>Negativos: ${resultados.negativos}</p>`);
+            document.write(`<p>Ceros: ${resultados.ceros}</p>`);
+            document.write(`<p>Positivos: ${resultados.positivos}</p>`);
+        }
+
+        const arreglo3 = [0, -5, 2, 3];
+        const resultados3 = contador(arreglo3);
+        mostrarResultado(arreglo3, resultados3);
+    </script>
+</body>
+</html>
