@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Cuadrados y Cubos</title>
+</head>
+<body>
+    <script>
+        function generarTabla(numero) {
+            document.write("<table border='1'>");
+            document.write("<tr><th>Número</th><th>Cuadrado</th><th>Cubo</th></tr>");
+            for (let i = 1; i <= numero; i++) {
+                document.write("<tr>");
+                document.write("<td>" + i + "</td>");
+                document.write("<td>" + (i ** 2) + "</td>");
+                document.write("<td>" + (i ** 3) + "</td>");
+                document.write("</tr>");
+            }
+            document.write("</table>");
+        }
+
+        const numero = parseInt(prompt("Ingrese un número:"));
+        generarTabla(numero);
+    </script>
+</body>
+</html>
