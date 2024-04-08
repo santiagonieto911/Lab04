@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inverso de un número</title>
+</head>
+<body>
+    <h2>Resultados de la función inverso</h2>
+
+    <script>
+        function inverso(numero) {
+            const numeroInvertido = numero.toString().split('').reverse().join('');
+            return parseInt(numeroInvertido);
+        }
+
+        function mostrarResultado(numero, resultado) {
+            document.write(`<p>El inverso de ${numero} es ${resultado}</p>`);
+        }
+
+        const num1 = 12345;
+        const res1 = inverso(num1);
+        mostrarResultado(num1, res1);
+
+        const num2 = 987654321;
+        const res2 = inverso(num2);
+        mostrarResultado(num2, res2);
+
+        const num3 = 1000;
+        const res3 = inverso(num3);
+        mostrarResultado(num3, res3);
+    </script>
+</body>
+</html>

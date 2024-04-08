@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promedios de Matrices</title>
+</head>
+<body>
+    <h2>Resultados de la función promedios</h2>
+
+    <script>
+        function promedios(matriz) {
+            return matriz.map(arr => {
+                const sum = arr.reduce((acc, curr) => acc + curr, 0);
+                return sum / arr.length;
+            });
+        }
+
+        function mostrarResultado(matriz, promedios) {
+            document.write("<p>Promedios de la matriz:</p>");
+            matriz.forEach((fila, index) => {
+                document.write(`<p>Fila ${index + 1}: ${fila.join(', ')} - Promedio: ${promedios[index]}</p>`);
+            });
+        }
+
+        // Pruebas
+        const matriz1 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+        const promedios1 = promedios(matriz1);
+        mostrarResultado(matriz1, promedios1);
+    </script>
+</body>
+</html>
+
